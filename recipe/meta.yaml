@@ -1,4 +1,4 @@
-{% set version = '5.0-0' %}
+{% set version = '5.1-0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -10,19 +10,22 @@ package:
 source:
   fn: gamlss.data_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/gamlss.data_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/gamlss.data/gamlss.data_{{ version }}.tar.gz
-  sha256: 3abc373d43698275361bfc3d61f5646e8ddf59019886bfd248bdea19493d1fd7
+    - {{ cran_mirror }}/src/contrib/gamlss.data_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/gamlss.data/gamlss.data_{{ version }}.tar.gz
+  sha256: 0aad438ea1aa6395677e52cd2cb496f9f4c9ba2d39edc92c8cb42e7fc91fe6c1
 
 build:
+  merge_build_host: True  # [win]
   number: 0
-  skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
+
 requirements:
   build:
+    - {{posix}}zip               # [win]
+
+  host:
     - r-base
 
   run:
@@ -30,17 +33,18 @@ requirements:
 
 test:
   commands:
-    - $R -e "library('gamlss.data')"  # [not win]
+    - $R -e "library('gamlss.data')"           # [not win]
     - "\"%R%\" -e \"library('gamlss.data')\""  # [win]
 
 about:
   home: http://www.gamlss.org/
   license: GPL-2 | GPL-3
-  summary: Data for GAMLSS models.
+  summary: Data used as examples to demonstrate GAMLSS models.
   license_family: GPL3
 
 extra:
   recipe-maintainers:
+    - dpryan79
     - johanneskoester
     - bgruening
     - daler
