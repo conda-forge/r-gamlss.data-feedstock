@@ -7,16 +7,15 @@ Package license: GPL-2 | GPL-3
 
 Feedstock license: BSD 3-Clause
 
-Summary: Data for GAMLSS models.
+Summary: Data used as examples to demonstrate GAMLSS models.
 
 
 
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-gamlss.data-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-gamlss.data-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-gamlss.data-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-gamlss.data-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-gamlss.data-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-gamlss-data-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-gamlss.data-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-gamlss.data-feedstock)
 
 Current release info
 ====================
