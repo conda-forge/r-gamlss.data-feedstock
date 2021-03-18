@@ -1,4 +1,4 @@
-{% set version = '5.1-4' %}
+{% set version = "6.0-1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gamlss.data_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gamlss.data/gamlss.data_{{ version }}.tar.gz
-  sha256: 0d3777d8c3cd76cef273aa6bde40a91688719be401195ed9bfd1e85bd7d5eeb5
+  sha256: 98fdec571aeacea4318c9e1c9d56b74716f3dc6acce385cbaad0d6128b154bb2
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -38,7 +38,7 @@ about:
   license: GPL-2 | GPL-3
   summary: Data used as examples to demonstrate GAMLSS models.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
