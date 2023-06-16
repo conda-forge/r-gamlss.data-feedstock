@@ -1,11 +1,11 @@
-About r-gamlss.data
-===================
+About r-gamlss.data-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gamlss.data-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.gamlss.org/
 
 Package license: GPL-2 | GPL-3
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-gamlss.data-feedstock/blob/main/LICENSE.txt)
 
 Summary: Data used as examples to demonstrate GAMLSS models.
 
