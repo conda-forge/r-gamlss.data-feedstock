@@ -1,4 +1,4 @@
-{% set version = "6.0-6" %}
+{% set version = "6.0-7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/gamlss.data_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/gamlss.data/gamlss.data_{{ version }}.tar.gz
-  sha256: bae0db19d95500b3f49f855d4ebd3ddb071c5e2d9104b27e0a73865f4909ab22
+  sha256: 8028c2453541a6dea92d587ca23cf7f79bae8fc9f3588bbff6ff7eea71d86771
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
